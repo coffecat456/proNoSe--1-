@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/static/fondo.jpg);
+        }
+    </style>
+</head>
+<body>
+{% extends "layout.html" %}
+
+{% block content %}
+<center>
+<form action="/areaT" method="post">
+    <label for="base" class="label">Dame la base de el triangulo</label>
+    <input type="text" class="texto" name="base" id="base">
+    <br>
+    <br>
+    <br>
+    <label for="altura" class="label">Dame la altura de el triangulo</label>
+    <input type="text" class="texto" name="altura" id="altura">
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+    <br>
+    <br>
+    El area de el triangulo es: {{res}}
+</form>
+</center>
+{% endblock %}
+</body>
+</html>

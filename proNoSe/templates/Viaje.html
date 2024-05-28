@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/static/fondo.jpg);
+        }
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+
+{% block content %}
+    <form action="/Viaje" method="post">
+        <center>
+        <label for="base" class="label">Dame un numeo de alumnos</label>
+        <input type="text" class="texto" name="numero" id="numero">
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+        <br>
+        <br>
+       El precio sera de: {{res}}
+       <br>
+       El numero de alumnos son: {{al}}
+    </center>
+    </form>
+{% endblock %}
+</body>
+</html>

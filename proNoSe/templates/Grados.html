@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/static/fondo.jpg);
+        }
+    </style>
+</head>
+<body>
+{% extends "layout.html" %}
+
+{% block content %}
+<center>
+    <form action="/Grados" method="post">
+        <label for="base" class="label">Dame un grado</label>
+        <input type="text" class="texto" name="grados" id="grados">
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+        <br>
+        <br>
+       los grados celsius: {{ras}}
+    </form>
+</center>
+{% endblock %}
+</body>
+</html>

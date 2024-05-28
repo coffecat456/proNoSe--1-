@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/static/fondo.jpg);
+        }
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+
+{% block content %}
+    <form action="/Calificacion" method="post">
+        <center>
+        <label for="base" class="label">Dame una Calificacion</label>
+        <input type="text" class="texto" name="calidicacion" id="calidicacion">
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+        <br>
+        <br>
+       Tu calificacion es: {{res}}
+    </center>
+    </form>
+{% endblock %}
+</body>
+</html>
